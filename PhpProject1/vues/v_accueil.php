@@ -1,0 +1,83 @@
+<?php
+if(isset($_SESSION['type']))
+{
+    if($_SESSION['type'] == "comptable") 
+    {?>
+        <div id="accueil" style="margin-left:auto;margin-right:auto; width:95%;height:auto;">
+<style>
+#test{
+	margin: 5% auto;
+	display:table;
+	width:100%;
+	height:auto;
+	border:0px;
+}
+#test .Ac_img{
+    position: relative;
+    height: auto;
+    max-height: 200px;
+    width: 90%;
+    max-width: 60%;
+    margin: 2px 20%;
+	float:none;
+}
+h2{
+	text-transform: uppercase;
+    font-weight: 700;
+}
+#test div{
+	display:table-cell;
+	padding: 10px; 
+	background-color: white;
+	border: 0px none; 
+	color: rgb(173, 216, 230); 
+	width: 33%;
+}	
+
+#test div:hover{
+	background-color: rgba(173, 216, 230,.7);
+    border-radius: 7px;
+}
+
+#test a{
+    text-align: center;
+    display: block;
+	text-decoration: none;
+	width:100%;
+	height:100%;
+}
+
+#test p{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(0, 138, 255, 0.6);
+    min-height: 45px;
+}
+</style>
+			<h2>Accueil</h2>
+                <div id="test">
+							<div>     
+								<a href="index.php?uc=param&action=formulaire"  title="valider Fiche Frais">							
+								<p>Informations personnel</p>
+								<center><img class="Ac_img" src="images/icone_param.png" value="param"></center>	
+								</a>						
+							</div>
+						
+                        <div>
+                            <a href="index.php?uc=ValiderVisiteur&action=historique"  title="valider Fiche Frais">
+								<p>Fiche de frais</p>
+								<img class="Ac_img" src="images/icone_ficheFrais.png"/>
+							</a>
+						</div>
+                        <div>
+                            <a href="index.php?uc=suiviFrais&action=listFrais"  title="fiche remboursement">
+								<p>Remboursement Frais</p>
+								<img class="Ac_img" src="images/icone_remboursement.png"/> 
+							</a>                
+						</div>
+                </div>
+        </div><?php
+    }
+}
+  

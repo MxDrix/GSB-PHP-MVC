@@ -1,0 +1,67 @@
+<?php if(!isset($_SESSION['idVisiteur']))   
+{?>
+    <!--<h2>Authentification</h2>
+        <div id="coForm">  
+			<h3 id="AuthForm">Authentification</h3>
+            <form method="POST" action="index.php?uc=connexion&action=valideConnexion">
+                <center>
+                    <input for='login' id="coInput" type="text" placeholder="Login" name="login" maxlength="20">
+                </center>
+                <center>
+                    <input for='mdp' id="coInput"  type="password" placeholder="Mot de passe" name="mdp" maxlength="40">
+                </center>
+                 <center>
+                     <input id="vaInput" type="submit" value="Valider" name="valider">
+                 </center>
+            </form>
+        </div>-->
+		<div class="container">
+            <section>				
+                <div id="container_demo">
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form method="POST" action="index.php?uc=connexion&action=valideConnexion"> 
+                                <h3 id="AuthForm">Authentification</h3> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u"> Login</label>
+                                    <input id="username" placeholder="Login" name="login" required="required" type="text">
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">Mot de passe </label>
+                                    <input id="password"  required="required" type="password" placeholder="Mot de passe" name="mdp" maxlength="40"> 
+                                </p>
+                                <p class="login button"> 
+                                    <input type="submit" value="Valider" name="valider"> 
+								</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+		<style>
+		
+		</style>
+		
+<?php }
+else
+{?>
+    <ul>
+<?php
+       
+        $nom =  $_SESSION['nom'];
+        $prenom = $_SESSION['prenom'];
+        echo "<b style='font-size:15px;font-family: 'Open Sans',minion pro, sans-serif;'>Connexion en cours de ".$nom." ".$prenom."</b>";     
+?>
+    </ul>
+</div>
+
+<script type="text/javascript">
+function timedRefresh(timeoutPeriod) {
+	console.log(timeoutPeriod);
+    setTimeout("window.location=\"./index.php?uc=connexion&action=accueil\";",timeoutPeriod);
+    }timedRefresh(50);
+</script><?php
+}
