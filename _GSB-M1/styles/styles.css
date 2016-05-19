@@ -1,0 +1,878 @@
+﻿
+a.hiddenanchor{
+	display: none;
+}
+
+/* Styles des divisions principales de la page */
+html{
+background:rgba(15,15,15, 0.8);
+}
+
+body{
+    background: linear-gradient(rgba(15,15,15, 0.8), rgba(0,0,255,0.3),rgba(15,15,15, 0.8));
+    background-repeat: repeat-x;
+    font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-size:0.8em;
+    width:auto;
+    height:auto;
+    margin:0;
+    padding:0;
+}
+#page {
+    background-color: white;
+    max-width: 1200px;
+    min-width: 720px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 96.5%;
+    height: 96.5%;
+    box-shadow: rgba(15,15, 15, 1) 2px 2px 0px 0px;
+}
+#entete{
+    color: #353535;
+    min-height: 18%;
+    padding: 1em;
+    border-collapse: separate;
+    margin-bottom: 2%;
+    box-shadow: rgba(15,15, 15, 1) 0px 2px 12px 0px;
+}
+#pied{
+  clear : both;
+	border : solid 0.2em #980101;
+	margin-left : 18%;
+	margin-top : 1em;
+	padding:0.4em;
+	padding: 0.2em;
+	border-collapse: separate;
+}
+#menuGauche {
+	margin-top : 0.8em;
+	padding: 1em;
+	background-color: white;
+	color: rgb(0,85,227);
+	float: left;
+	width: 14%;
+}
+
+#contenu{
+    border: none;
+    padding-left: 1.0em;
+    padding-bottom: 0.5em;
+    padding-right: 1.0em;
+    background-color: white;
+    border-left: groove 0.8em #000099;
+    margin-left: 18%;
+    margin-right: 2px;
+    height: 99%;
+}
+
+/* pour r�tablir le mauvais effet sur les nav. modernes */
+html>body #contenu{
+  min-height:61.5%;
+  max-height:61.5%;
+  overflow: auto; 
+}
+#contenu::-webkit-scrollbar {
+    width: 0.7em;
+    height:20%;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+#contenu::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7); 
+	width: 1em;
+        height:20%;
+}
+
+/* style � appliquer � la balise ul d'identifiant menulist */
+ul#menuList{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    width:98%;
+    font-size: 1em;
+}
+
+/* style � appliquer aux �l�ments de la balise ul d'identifiant menulist */
+ul#menuList li {
+    position:relative;
+    margin:8px;
+    padding:0px;
+}
+
+/* apparences des liens dans listes et sous-listes non num�rot�es */
+ul#menuList a {
+    color:rgb(0,85,227);
+    display:block;
+    text-decoration:none;
+    width:100%;
+}
+ul#menuList a:hover {
+    
+    color: white;
+}
+
+#entete #logoGSB {
+  float : left;
+  width : 238px;
+  height : 152px;
+}
+
+#enH1 {
+    font-family: "Open Sans",lithos, sans-serif;
+    margin: 0.6em;
+    margin-right: 17%;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 3%;
+    color: white;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0,.9);
+}
+#enH1_1 {
+    margin: 0.5em;
+    margin-right: 15%;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0,.9);
+}
+#coLabel{
+    font-size:17px;
+    margin-top:5px;
+    font-weight: lighter;
+    font-family: "Open Sans",minion pro, sans-serif;
+}
+#coP{
+    height: 12%;
+}
+#inputFrais{
+    width:100%;
+    
+}
+#coInput{
+    padding: 8px 4px 8px 10px;
+    border: 1px solid #4e3043;
+    border: 1px solid rgba(78,48,67, 0.1);
+    background: rgba(0,0,0,0.15);
+    border-radius: 3px;
+    box-shadow: 0 1px 0px rgba(255,255,255,.8), inset 0 .5px 1px rgba(0,0,0,.8);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: #fff;
+    font-size: 13px;
+    width: 90%;
+    margin: 0 auto 15px;
+    height: 30px;
+    background-color: rgba(0, 103, 204,0.19)!important;
+}
+#coForm{
+    height: 100%;
+    margin: 5% auto 0;
+    width: 80%;
+    max-width: 320px;
+    max-height: 190px;
+    border: 1px groove rgba(0,0,0,.1);
+    background: rgba(0,0,0,.012);
+    padding: 2% 5% 5%;
+    border-radius: 10px;
+}
+#AuthForm{
+    text-shadow: 0px 2px 10px rgba(13, 103, 204,1),0px -1px 2px rgba(13, 103, 204,1);
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    padding: 2%;
+    box-shadow: rgba(13, 103, 204,1) 0px 0px 9px 1px;
+    border-radius: 5px;
+}
+#vaInput{
+    margin-top: 5px;
+    background-color: rgba(0, 103, 204,0.7);
+    width: 60%;
+    height: 16%;
+    border-radius: 8px;
+    border: 1px;
+    color: white;
+    font-size: 21px;
+    font-weight: 800;
+    /* text-transform: uppercase; */
+    border: 1px solid #4e3043;
+    border: 1px solid rgba(78,48,67, 0.8);
+    text-shadow: 1px 1px 1px rgba(15,15,15,1);
+}    
+
+input#vaInput:hover {
+    background-color: rgba(0, 103, 204,0.8);
+    font-weight: 900;
+    padding: 1%;
+}
+
+#supA{
+    color: #FFF;
+    text-decoration: none;
+    background-color: rgba(0, 103, 204, 0.7);
+    width: 59%;
+    height: 18%;
+    border:outset;
+    margin-top: 20px;
+    padding: 0%;
+}
+
+#divSuivi{
+    width:100%;
+    min-width:80%;
+    
+}
+
+#pSuivi{
+    min-width:15%;
+    
+}
+
+#contenu pre {
+  width:95%;
+  overflow : scroll;
+}
+#contenu h2 {
+  font-size : large;
+  text-align:left;
+  margin: .5em;
+}
+
+.logoValidW3c {
+  display: inline;
+}
+#libValidW3c{
+  display : inline;
+  vertical-align:middle;
+}
+
+/* Style des formulaires */
+.corpsForm {
+  border : solid 0.1em #000;
+  border-bottom-width:1px;
+  margin-bottom : 0em;
+  width : 100%;
+}
+.piedForm {
+  border-bottom-width : 0.1em;
+  border-left-width : 0.1em;
+  border-right-width : 0.1em;
+  border-top-width : 0em;
+  border-style : none;
+  border-color : #000;
+  text-align:right ;
+  width : 95%;
+  margin-top:0em;
+}
+form {
+  margin-bottom:1em;  
+}
+.corpsForm legend {
+  font-weight:bold;
+  font-size:1.2em;
+}
+.corpsForm label{
+  float: left;
+  text-align:right;
+  width:33%;
+	margin: 0;
+	padding: 0 .5em 0 0;
+	line-height: 1.8;	
+}
+input, button, textarea, select{
+  font-family:"Trebuchet MS", sans-serif;
+  font-size : 1em;
+}
+button{
+  width : 60px;
+  height : 30px;
+  text-align:center;
+  vertical-align:middle;
+}
+input:hover, textarea:hover, select:hover{
+  background-color : #FAFAE6;
+  cursor : pointer;
+}
+
+/*  Le texte des messages d'erreur est de couleur rose sur fond ocre et de 
+taille de caract�res l�g�rement sup�rieure � la normale */
+.erreur{ 
+    color:rgb(203,28,128);
+    font-size:1.1em;
+    min-width: 300px;
+    height: 2%;
+    padding-bottom: 0%;
+    margin-left: 35%;
+    position: absolute;
+    margin-top: 3%;
+}
+.centre {
+  text-align:center;
+}
+
+.info {
+   background-color:rgb(178,207,81);
+   color : white;
+   font-size:1.1em;
+   width : 95%  
+}
+
+.encadre {
+  border : solid 0.1em #000;
+  width : 100%;
+}
+/* Style pour les liens de la page principale */
+#contenu .corpsTexte {
+  width:80%;
+  font-size:1.2em;
+}
+#aDetail{
+    font-size: 1em; 
+    min-height:40px;
+    text-decoration: none;
+    border:0.2em solid rgba(221, 220, 217, 0.7);
+    color:white;
+    background-color:rgba(67, 165, 255, 0.7);
+    padding:2px 5.5px 2px 5.5px;
+}
+#aDetail:hover{
+    font-size: 1em; 
+    min-height:40px;
+    color:blue;
+    background-color: rgba(255, 255, 255, 0.7);   
+    text-decoration: none;
+    border:0.2em solid rgba(67, 165, 255, 0.7);
+    padding-left:5.5px;
+    color:rgba(67, 165, 255, 0.7);
+    padding-right:5.5px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+/* Style pour les liens de la page principale */
+/*#contenu a {
+   font-size : 1.1em;
+   color:gray;
+   text-decoration:none;
+}
+#contenu a:hover {
+   text-decoration:underline;
+   background-color : #D9BB7A;
+   font-size : 1.1em;
+}*/
+
+/* Style pour les parties importantes de la page principale */
+#contenu strong {
+  font-weight:bold;
+}
+
+/* Styles pour les tableaux de la page principale */
+#contenu table {
+   background-color:#FFF;
+   border : 0.1em solid #777777;
+   color:black;
+width: 99%;
+    display: table;
+   margin-right : auto ;
+   margin-left:auto;
+   border-collapse : collapse;
+}
+
+/* Style pour les lignes d'en-t�te des tableaux */
+#contenu th {  
+   background-color:#77AADD;
+   height:21px;
+   text-align:left;
+   vertical-align:top;
+   font-weight:bold;
+   border-bottom:0.1em solid #777777;
+   font-size:1.1em;
+} 
+
+#contenu td {
+   border :1px solid #777777;
+}
+
+#contenu h3 {
+    font-size : 1.2em;
+}
+table.listeLegere {
+    width:80%;
+    padding-top: 10px;
+    margin-bottom: 0.5em;
+}
+
+/* Tableaux quadrill�s utilis�s pour l'affichage de listes avec contenu l�ger*/ 
+table.listeLegere th, table.listeLegere td {
+  border : dotted rgb(178,207,81) 0.1em;
+  vertical-align : top;
+  text-align : left;
+}
+
+table.listeLegere caption {
+  font-size : 1.1em;
+  text-align : left;
+  margin-bottom : 0.3em;
+}
+table.listeLegere td {
+  vertical-align:middle;
+  font-weight:normal;
+  font-size: small;
+}
+table.listeLegere th.eltForfait{
+  color:black;
+}
+table.listeLegere th.date, table.listeLegere th.montant{
+  width:15%;
+  color:black;
+}
+table.listeLegere th.libelle{
+  width:70%;
+  color:black;
+}
+
+#contenu h2 {
+text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #6988BE;
+    padding-left: 25px;
+    background-color: #E9F1FE;
+    height: auto;
+    text-shadow: 0px 1px 10px rgba(13, 103, 204,1),0px -1px 8px rgba(13, 103, 204,1);
+    color: white;
+    padding: 1%;
+    box-shadow: rgba(13, 103, 204,1) 0px 0px 9px 1px;
+    border-radius: 5px;
+}
+
+#contenu img {
+  height : 40px;
+  width:auto;
+  float : left;
+
+}
+
+fieldset input {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.TDpdf:hover, .TDpdf:hover i{
+   background-color:rgba(255,0,0,1);
+   color:white !important;
+}
+
+.TDdoc:hover, .TDdoc:hover i{
+   background-color:rgba(0,0,255,1);
+   color:white !important;
+}
+
+input:focus {
+    outline: none;
+}
+
+#coInput::-webkit-input-placeholder {
+   color: white;
+}
+
+#coInput:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+#coInput::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+#coInput:-ms-input-placeholder {  
+   color: white;  
+}
+
+
+
+
+
+/* remove codrops styles and reset the whole thing */
+#container_demo{
+	 text-align: left;
+	 margin: 0;
+	 padding: 0;
+	 margin: 0 auto;
+	 font-family: "Trebuchet MS","Myriad Pro",Arial,sans-serif;
+}
+
+/** fonts used for the icons **/ 
+@font-face {
+    font-family: 'FontomasCustomRegular';
+    src: url('../fonts/fontomas-webfont.eot');
+    src: url('../fonts/fontomas-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontomas-webfont.woff') format('woff'),
+         url('../fonts/fontomas-webfont.ttf') format('truetype'),
+         url('../fonts/fontomas-webfont.svg#FontomasCustomRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FranchiseRegular';
+    src: url('../fonts/franchise-bold-webfont.eot');
+    src: url('../fonts/franchise-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/franchise-bold-webfont.woff') format('woff'),
+         url('../fonts/franchise-bold-webfont.ttf') format('truetype'),
+         url('../fonts/franchise-bold-webfont.svg#FranchiseRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#wrapper{
+    width: 60%;
+    right: 0px;
+    margin: 3% auto;
+    position: relative;	
+}
+/**** Styling the form elements **/
+
+/**** general text styling ****/
+#wrapper a{
+	color: rgb(95, 155, 198);
+	text-decoration: underline;
+}
+
+#wrapper h1{
+	font-size: 48px;
+	color: rgb(6, 106, 117);
+	padding: 2px 0 10px 0;
+	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+/** For the moment only webkit supports the background-clip:text; */
+#wrapper h1{
+    background: -webkit-repeating-linear-gradient(-45deg, 
+	rgb(18, 83, 93) , 
+	rgb(18, 83, 93) 20px, 
+	rgb(64, 111, 118) 20px, 
+	rgb(64, 111, 118) 40px, 
+	rgb(18, 83, 93) 40px);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+#wrapper h1:after{
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-top: 10px;
+	background: -moz-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(147,184,189,0.8) 20%, rgba(147,184,189,1) 53%, rgba(147,184,189,0.8) 79%, rgba(147,184,189,0) 100%); 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(147,184,189,0)), color-stop(20%,rgba(147,184,189,0.8)), color-stop(53%,rgba(147,184,189,1)), color-stop(79%,rgba(147,184,189,0.8)), color-stop(100%,rgba(147,184,189,0))); 
+	background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: -o-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: -ms-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
+
+#wrapper p{
+	margin-bottom:15px;
+}
+#wrapper p:first-child{
+	margin: 0px;
+}
+#wrapper label{
+	color: rgb(64, 92, 96);
+	position: relative;
+}
+
+/**** advanced input styling ****/
+/* placeholder */
+::-webkit-input-placeholder  { 
+	color: rgb(190, 188, 188); 
+	font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{ 
+	color: rgb(190, 188, 188);
+	font-style: italic;
+} 
+input {
+  outline: none;
+}
+
+/* all the input except submit and checkbox */
+#wrapper input:not([type="checkbox"]){
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;	
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+}
+#wrapper input:not([type="checkbox"]):active,
+#wrapper input:not([type="checkbox"]):focus{
+	border: 1px solid rgba(91, 90, 90, 0.7);
+	background: rgba(238, 236, 240, 0.2);	
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+} 
+
+/** the magic icon trick ! **/
+[data-icon]:after {
+    content: attr(data-icon);
+    font-family: 'FontomasCustomRegular';
+    color: rgb(106, 159, 171);
+    position: absolute;
+    left: 10px;
+    top: 35px;
+	width: 30px;
+}
+
+/*styling both submit buttons */
+#wrapper p.button input{
+	width: 30%;
+	cursor: pointer;	
+	background: rgb(61, 157, 179);
+	padding: 8px 5px;
+	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+	color: #fff;
+	font-size: 24px;	
+	border: 1px solid rgb(28, 108, 122);	
+	margin-bottom: 10px;	
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;	
+	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	   -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	        box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+}
+#wrapper p.button input:hover{
+	background: rgb(74, 179, 198);
+}
+#wrapper p.button input:active,
+#wrapper p.button input:focus{
+	background: rgb(40, 137, 154);
+	position: relative;
+	top: 1px;
+	border: 1px solid rgb(12, 76, 87);	
+	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+	   -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+	        box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+}
+p.login.button,
+p.signin.button{
+	text-align: right;
+	margin: 5px 0;
+}
+
+
+/* styling the checkbox "keep me logged in"*/
+.keeplogin{
+	margin-top: -5px;
+}
+.keeplogin input,
+.keeplogin label{
+	display: inline-block;
+	font-size: 12px;	
+	font-style: italic;
+}
+.keeplogin input#loginkeeping{
+	margin-right: 5px;
+}
+.keeplogin label{
+	width: 80%;
+}
+
+
+/*styling the links to change from one form to another */
+
+p.change_link{
+	position: absolute;
+	color: rgb(127, 124, 124);
+	left: 0px;
+	height: 20px;
+	width: 440px;
+	padding: 17px 30px 20px 30px;
+	font-size: 16px	;
+	text-align: right;
+	border-top: 1px solid rgb(219, 229, 232);
+	-webkit-border-radius: 0 0  5px 5px;
+	   -moz-border-radius: 0 0  5px 5px;
+	        border-radius: 0 0  5px 5px;
+	background: rgb(225, 234, 235);
+	background: -moz-repeating-linear-gradient(-45deg, 
+	rgb(247, 247, 247) , 
+	rgb(247, 247, 247) 15px, 
+	rgb(225, 234, 235) 15px, 
+	rgb(225, 234, 235) 30px, 
+	rgb(247, 247, 247) 30px
+	);
+	background: -webkit-repeating-linear-gradient(-45deg, 
+	rgb(247, 247, 247) , 
+	rgb(247, 247, 247) 15px, 
+	rgb(225, 234, 235) 15px, 
+	rgb(225, 234, 235) 30px, 
+	rgb(247, 247, 247) 30px
+	);
+	background: -o-repeating-linear-gradient(-45deg, 
+	rgb(247, 247, 247) , 
+	rgb(247, 247, 247) 15px, 
+	rgb(225, 234, 235) 15px, 
+	rgb(225, 234, 235) 30px, 
+	rgb(247, 247, 247) 30px
+	);
+	background: repeating-linear-gradient(-45deg, 
+	rgb(247, 247, 247) , 
+	rgb(247, 247, 247) 15px, 
+	rgb(225, 234, 235) 15px, 
+	rgb(225, 234, 235) 30px, 
+	rgb(247, 247, 247) 30px
+	);
+}
+#wrapper p.change_link a {
+	display: inline-block;
+	font-weight: bold;
+	background: rgb(247, 248, 241);
+	padding: 2px 6px;
+	color: rgb(29, 162, 193);
+	margin-left: 10px;
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid rgb(203, 213, 214);
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s  linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s  linear;
+	transition: all 0.4s  linear;
+}
+#wrapper p.change_link a:hover {
+	color: rgb(57, 191, 215);
+	background: rgb(247, 247, 247);
+	border: 1px solid rgb(74, 179, 198);
+}
+#wrapper p.change_link a:active{
+	position: relative;
+	top: 1px;
+}
+/** Styling both forms **/
+#register, 
+#login{
+    position: relative;
+    top: 0px;
+    width: 80%;
+    padding: 18px 10% 20px 10%;
+    margin: 0;
+    background: rgb(247, 247, 247);
+    border: 1px solid rgba(147, 184, 189,0.8);
+    -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    -webkit-box-shadow: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#register{	
+	z-index: 21;
+	opacity: 0;
+}
+#login{
+	z-index: 22;
+}
+#toregister:target ~ #wrapper #register,
+#tologin:target ~ #wrapper #login{
+	z-index: 22;
+	-webkit-animation-name: fadeInLeft;
+	-moz-animation-name: fadeInLeft;
+	-ms-animation-name: fadeInLeft;
+	-o-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+	-webkit-animation-delay: .1s;
+	-moz-animation-delay: .1s;
+	-o-animation-delay: .1s;
+	-ms-animation-delay: .1s;
+	animation-delay: .1s;
+}
+#toregister:target ~ #wrapper #login,
+#tologin:target ~ #wrapper #register{
+	-webkit-animation-name: fadeOutLeft;
+	-moz-animation-name: fadeOutLeft;
+	-ms-animation-name: fadeOutLeft;
+	-o-animation-name: fadeOutLeft;
+	animation-name: fadeOutLeft;
+}
+
+/** the actual animation, credit where due : http://daneden.me/animate/ ***/
+.animate{
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	
+	-moz-animation-duration: 0.5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	
+	-o-animation-duration: 0.5s;
+	-o-animation-timing-function: ease;
+	-o-animation-fill-mode: both;
+	
+	-ms-animation-duration: 0.5s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-fill-mode: both;
+	
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+/** yerk some ugly IE fixes 'cause I know someone will ask "why does it look ugly in IE?", no matter how many warnings I will put in the article */
+
+.lt8 #wrapper input{
+	padding: 10px 5px 10px 32px;
+    width: 92%;
+}
+.lt8 #wrapper input[type=checkbox]{
+	width: 10px;
+	padding: 0;
+}
+.lt8 #wrapper h1{
+	color: #066A75;
+}
+.lt8 #register{	
+	display: none;
+}
+.lt8 p.change_link,
+.ie9 p.change_link{
+	position: absolute;
+	height: 90px;
+	background: transparent;
+}
+

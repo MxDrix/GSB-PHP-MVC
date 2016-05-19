@@ -1,0 +1,71 @@
+Options -Indexes
+Options -Multiviews
+Options +FollowSymlinks
+SetEnv REGISTER_GLOBALS 0
+SetEnv PHP_VER 5_4
+DirectoryIndex index.php index.html index.phtml /erreurs/403.php
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+RewriteEngine on 
+
+
+
+RewriteCond %{HTTP_HOST} ^http://localhost/GSB_M1_/
+RewriteRule (.*) http://localhost/GSB_M1_/$1 [R=301,L]
+RewriteRule ^Accueil$ /index.php?uc=connexion&action=accueil [L]
+RewriteRule ^Fiches-de-frais$ /index.php?uc=ValiderVisiteur&action=historique [L]
+RewriteRule ^Formulaire$ /index.php?uc=param&action=formulaire [L]
+RewriteRule ^Fiches-Valide&Fiches-Rembourse$ /index.php?uc=suiviFrais&action=listFrais [L]
+RewriteRule ^Connexion$ /index.php [L]
+RewriteRule ^Valider-fiche-frais$ /index.php?uc=ValiderVisiteur&action=historique [L]
+RewriteRule ^Deconnexion$ /index.php?uc=connexion&action=deconnexion [L]
+
+## contrôle du cache navigateur - Expire headers
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 1 month"
+	ExpiresByType image/jpg 		"access plus 1 month"
+	ExpiresByType image/jpeg 		"access plus 1 month"
+	ExpiresByType image/png 		"access plus 1 month"
+	ExpiresByType image/gif 		"access plus 1 month"
+	ExpiresByType image/svg+xml		"access plus 1 month"
+	AddType image/x-icon .ico
+	ExpiresByType image/ico 		"access plus 1 month"
+	ExpiresByType image/icon 		"access plus 1 month"
+	ExpiresByType image/x-icon 		"access plus 1 month"
+	ExpiresByType text/css 			"access plus 1 month"
+	ExpiresByType text/javascript 		"access plus 1 month"
+	ExpiresByType text/html 		"access plus 1 month"
+	ExpiresByType application/xhtml+xml 	"access plus 1 month"
+	ExpiresByType application/javascript 	"access plus 1 month"
+	ExpiresByType application/x-javascript 	"access plus 1 month"
+	ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule>
+
+# BEGIN Cache-Control Headers
+<IfModule mod_headers.c>
+	Header always set X-Content-Type-Options "nosniff"
+	Header always set X-FRAME-OPTIONS "DENY"
+	Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+<ifmodule mod_headers.c>
+	 <filesmatch "\\.(jpg|jpe?g|png|gif|js|css|swf|ico|woff|woff2|mp3)$">
+	 Header set Cache-Control "max-age=2592000, public"
+	 </filesmatch>
+	 <filesmatch "\\.(css)$">
+	 Header set Cache-Control "max-age=2592000, public"
+	 </filesmatch>
+	 <filesmatch "\\.(js)$">
+	 Header set Cache-Control "max-age=2592000, private"
+	 </filesmatch>
+	<filesmatch "\\.(html|htm)$">
+	Header set Cache-Control "max-age=7200, public"
+	</filesmatch>
+	# Disable caching for scripts and other dynamic files
+	<filesmatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+	Header unset Cache-Control
+	</filesmatch>
+</ifmodule>
+# END Cache-Control Headers
