@@ -5,8 +5,8 @@
     <title>Intranet du Laboratoire Galaxy-Swiss Bourdin</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href="./styles/styles.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" type="image/x-icon" href="./images/logoH.ico" />
-	<link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.css">
+    <link rel="icon" type="image/png" href="./images/logoH.png" />
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.css">
     <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
   </head>
   <body>

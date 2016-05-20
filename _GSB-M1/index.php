@@ -39,10 +39,10 @@ switch($uc){
         }
         case 'voirPdf':{
             include("controleurs/c_suiviFrais.php");break;
-        }break;     
+        }    
         case 'param':{
             include("controleurs/c_paramComptable.php");break;
-        }break;     
+        }    
 }
 include("vues/v_pied.php") ;
 ?>
