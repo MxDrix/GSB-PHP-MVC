@@ -117,6 +117,7 @@ switch($action){
                 $dateA=$_SESSION['frais'][$key]['date'];
                 $libelle=$_SESSION['frais'][$key]['libelle'];
                 $pdo->reporter($idForfait,$idVisiteur,$mois);
+                //$pdo->creeNouvellesLignesFrais($idVisiteur,$mois);  
                 $listVisiteur=$pdo->getVisiteurMois($mois);
                 include("vues/v_listeMoisValider.php");
                 include("vues/v_visiteurMois.php");  

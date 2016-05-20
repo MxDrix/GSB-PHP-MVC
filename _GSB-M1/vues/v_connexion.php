@@ -33,17 +33,21 @@
                                     <input id="password"  required="required" type="password" placeholder="Mot de passe" name="mdp" maxlength="40"> 
                                 </p>
                                 <p class="login button"> 
+                                    <label for="check_accueil">Rester connecté</label>
+                                    <input type="checkbox" name="Save" value="true" id="check_accueil">
+                                </p>
+                                <p class="login button">
                                     <input type="submit" value="Valider" name="valider"> 
-								</p>
+				</p>
                             </form>
                         </div>
                     </div>
                 </div>  
             </section>
         </div>
-		<style>
-		
-		</style>
+    <style>
+
+    </style>
 		
 <?php }
 else

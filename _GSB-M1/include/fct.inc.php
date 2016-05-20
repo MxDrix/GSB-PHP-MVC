@@ -26,8 +26,7 @@ function estConnecte(){
  * @param $adresse
  */
 
-function connecter($id,$nom,$prenom,$type,$ville,$cp,$adresse){
-  
+function connecter($id,$nom,$prenom,$type,$ville,$cp,$adresse){  
 	$_SESSION['idVisiteur'] = $id; // $_SESSION['id']
 	$_SESSION['nom'] = $nom;
 	$_SESSION['prenom'] = $prenom;
@@ -35,6 +34,10 @@ function connecter($id,$nom,$prenom,$type,$ville,$cp,$adresse){
         $_SESSION['cp'] = $cp;
         $_SESSION['adresse'] = $adresse;
         $_SESSION['ville'] = $ville;
+}
+function save($log,$mdp){
+    setcookie('log',$log, time() + 365*24*3600, null, null, false, true);
+    setcookie('mdp',$mdp, time() + 365*24*3600, null, null, false, true);
 }
 /**
  * Détruit la session active

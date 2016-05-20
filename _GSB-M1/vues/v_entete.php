@@ -16,7 +16,7 @@
 		{
 			if($_SESSION['type'] =="comptable" || $_SESSION['type'] =="commercial")
 			{
-				echo "<a href='./Acceuil'>"?><img src="./images/logo.png" id="logoGSB" alt="Laboratoire Galaxy-Swiss Bourdin" title="Laboratoire Galaxy-Swiss Bourdin" /></a><?php
+				echo "<a href='./index.php?uc=connexion&action=accueil'>"?><img src="./images/logo.png" id="logoGSB" alt="Laboratoire Galaxy-Swiss Bourdin" title="Laboratoire Galaxy-Swiss Bourdin" /></a><?php
 			}
 		}
 		else{?>

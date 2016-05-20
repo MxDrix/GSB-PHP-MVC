@@ -249,6 +249,19 @@ public function getMois(){
 			PdoGsb::$monPdo->exec($req);
 		 }
 	}
+            public function creeNewFicheReport($idVisiteur,$mois){
+                
+                $req = "insert into fichefrais(idvisiteur,mois,nbJustificatifs,montantValide,dateModif,idEtat) 
+		values('$idVisiteur','$mois',0,0,now(),'CR')";
+		PdoGsb::$monPdo->exec($req);
+		$lesIdFrais = $this->getLesIdFrais();
+		foreach($lesIdFrais as $uneLigneIdFrais){
+			$unIdFrais = $uneLigneIdFrais['idfrais'];
+			$req = "insert into lignefraisforfait(idvisiteur,mois,idFraisForfait,quantite) 
+			values('$idVisiteur','$mois','$unIdFrais',0)";
+			PdoGsb::$monPdo->exec($req);
+		 }
+	}
 /**
  * Crée un nouveau frais hors forfait pour un visiteur un mois donné
  * à partir des informations fournies en paramètre
@@ -428,13 +441,20 @@ public function getMois(){
                         if($numMois==12)
                         {
                             $numAnnee=$numAnnee+1;
-                            $numMois=1;
+                            $numMois=01;
                         }
                         else{
-                            $numMois=$numMois+1;
+                            if($numMois<10)
+                            {
+                                $numMois=$numMois+1;
+                                $numMois = "0".$numMois;
+                            }
+                            else{
+                                $numMois=$numMois+1;    
+                            }                           
                         }
-		     
-             $sql="update lignefraishorsforfait set mois='".$numAnnee.$numMois."' where idVisiteur='$idVisiteur' and mois='$mois' and id=$id";
+            $this->creeNewFicheReport($idVisiteur,$numAnnee.$numMois);                            
+            $sql="update lignefraishorsforfait set mois='".$numAnnee.$numMois."' where idVisiteur='$idVisiteur' and mois='$mois' and id=$id";
             PdoGsb::$monPdo->exec($sql);
             
         }

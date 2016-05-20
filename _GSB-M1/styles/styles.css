@@ -643,7 +643,15 @@ input {
     top: 35px;
 	width: 30px;
 }
-
+#wrapper  p.button #check_accueil{    
+         width: auto;
+            background: rgb(40, 137, 154);
+            position: relative;
+            top: 1px;
+            -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+            -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+        }
 /*styling both submit buttons */
 #wrapper p.button input{
 	width: 30%;

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 if(!isset($_REQUEST['action'])){
 	$_REQUEST['action'] = 'demandeConnexion';
@@ -10,13 +10,37 @@ switch($action){
                 include("vues/v_accueil.php");
                 break;
         }
-	case 'demandeConnexion':{
+	case 'demandeConnexion':{            
+                            
+            if(isset($_COOKIE['log']) && isset($_COOKIE['mdp']))
+            {
+                $visiteur = $pdo->getInfosVisiteur($_COOKIE['log'],$_COOKIE['mdp']);
+                
+		if(!is_array( $visiteur) /* && !is_array( $comptable) */){  
+			ajouterErreur("Login ou mot de passe incorrect");
+                        include("vues/v_erreurs.php");
+                        include("vues/v_connexion.php");
+		}
+		else{
+			$id = $visiteur['id'];
+			$nom =  $visiteur['nom'];
+			$prenom = $visiteur['prenom'];
+                        $ville = $visiteur['ville'];
+			$adresse =  $visiteur['adresse'];
+			$cp = $visiteur['cp'];
+                        $type = $visiteur['typeVisiteur'];
+                        connecter($id,$nom,$prenom,$type,$ville,$cp,$adresse);  
+                        include("vues/v_sommaire.php"); 
+                        include("vues/v_accueil.php");                        
+                    }
+            }
+            else{
                 include("vues/v_sommaire.php"); 
 		include("vues/v_connexion.php");
+            }
 		break;
 	}
-	case 'valideConnexion':{
-            
+	case 'valideConnexion':{            
 		$login = $_REQUEST['login'];
 		$mdp = $_REQUEST['mdp'];
 		$visiteur = $pdo->getInfosVisiteur($login,sha1($mdp));
@@ -30,13 +54,17 @@ switch($action){
 			$id = $visiteur['id'];
 			$nom =  $visiteur['nom'];
 			$prenom = $visiteur['prenom'];
-            $ville = $visiteur['ville'];
+                        $ville = $visiteur['ville'];
 			$adresse =  $visiteur['adresse'];
 			$cp = $visiteur['cp'];
-            $type = $visiteur['typeVisiteur'];
+                        $type = $visiteur['typeVisiteur'];
+                        if(isset($_REQUEST['Save']) && $_REQUEST['Save']=="true")
+                        {
+                            save($login,sha1($mdp));            
+                        }
                         connecter($id,$nom,$prenom,$type,$ville,$cp,$adresse);  
                         include("vues/v_sommaire.php"); 
-                        include("vues/v_accueil.php");
+                        include("vues/v_accueil.php");                        
                     }
 		break;
 	}
@@ -45,8 +73,8 @@ switch($action){
 		break;
         }
 	default :{
-		include("vues/v_connexion.php");
-		break;
+		include("vues/v_connexion.php");		
+          break;
 	}
 }
 ?>
