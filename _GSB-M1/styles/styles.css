@@ -309,7 +309,8 @@ taille de caract�res l�g�rement sup�rieure � la normale */
     padding-bottom: 0%;
     margin-left: 35%;
     position: absolute;
-    margin-top: 3%;
+    margin-top: 0%;
+    z-index:500;
 }
 .centre {
   text-align:center;
