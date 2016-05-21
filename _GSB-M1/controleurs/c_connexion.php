@@ -19,6 +19,7 @@ switch($action){
 		if(!is_array( $visiteur) /* && !is_array( $comptable) */){  
 			ajouterErreur("Login ou mot de passe incorrect");
                         include("vues/v_erreurs.php");
+                        include("vues/v_sommaire.php"); 
                         include("vues/v_connexion.php");
 		}
 		else{
@@ -48,6 +49,7 @@ switch($action){
 		if(!is_array( $visiteur) /* && !is_array( $comptable) */){  
 			ajouterErreur("Login ou mot de passe incorrect");
                         include("vues/v_erreurs.php");
+                        include("vues/v_sommaire.php"); 
                         include("vues/v_connexion.php");
 		}
 		else{
