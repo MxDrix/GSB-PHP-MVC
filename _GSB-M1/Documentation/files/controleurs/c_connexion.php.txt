@@ -72,6 +72,13 @@ switch($action){
 	}
         case 'deconnexion':{
 		include("vues/v_deconnexion.php");
+                session_destroy();           
+                if (isset($_COOKIE['log']) && isset($_COOKIE['mdp'])) {
+                    unset($_COOKIE['log']);
+                    unset($_COOKIE['mdp']);
+                    setcookie('log', '', time() - 365*24*3600, null, null, false, true); // empty value and old timestamp
+                    setcookie('mdp', '', time() - 365*24*3600, null, null, false, true); // empty value and old timestamp
+                }
 		break;
         }
 	default :{
